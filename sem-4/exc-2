@@ -1,0 +1,24 @@
+n = int(input('n: '))
+num = 0
+dictionary = dict()
+
+while num < n:
+    key = input("Insert key:")
+    value = input("Insert value:")
+    dictionary[key] = value
+    num += 1
+
+m = int(input('m: '))
+num = 0
+list = list()
+while num < m:
+    value2 = input("value:")
+    if value2 in dictionary.keys():
+        list.append(dictionary[value2])
+        dictionary.pop(value2)
+    else: 
+        list.append(value2)
+    num += 1
+
+print(dictionary)
+print(list)
