@@ -1,0 +1,21 @@
+def  list_avg(lst, multiplier = 1):
+    average = 0
+    count = 0
+    for i in range(len(lst)):
+        if type(lst[i]) == int or type(lst[i]) == float:
+            lst[i] = (lst[i]) * multiplier
+            average += lst[i]
+            count += 1
+        elif type(lst[i]) == str:
+            if lst[i].isnumeric():
+                lst[i] = int(lst[i]) * multiplier
+                average += int(lst[i])
+                count += 1
+
+    if count != 0:
+        return(average / count)
+    else:
+        print("Error: Division is not allowed by zero")
+        return
+
+print(list_avg(['6', 3, 3.0], 2))
