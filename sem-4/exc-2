@@ -12,7 +12,7 @@ m = int(input('m: '))
 num = 0
 list = list()
 while num < m:
-    value2 = input("value:")
+    value2 = input("Insert value:")
     if value2 in dictionary.keys():
         list.append(dictionary[value2])
         dictionary.pop(value2)
