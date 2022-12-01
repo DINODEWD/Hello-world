@@ -1,0 +1,24 @@
+def input_nums(n):
+    if type(n) == int or (type(n) == str and n.isnumeric()):
+        n = int(n)
+        array = []
+        for i in range(n):
+            element = input()
+            if element.isnumeric():
+                array.append(int(element))
+        return array
+    array = []
+    return array
+
+def sum_list(lst):
+    sum = 0
+    for i in range(len(lst)):
+        floatElement = True
+        if type(lst[i]) == str:
+            for char in lst[i]:
+                if (char < "0" or char > "9") and char != ".":
+                    floatElement = False
+                    break
+        if type(lst[i]) == int or floatElement or type(lst[i]) == float:
+            sum += float(lst[i])
+    return sum
